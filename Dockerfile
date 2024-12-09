@@ -14,9 +14,9 @@ FROM node:18
 
 WORKDIR /app
 
-COPY --from=build /node_modules .
+COPY --from=build /app/node_modules .
 
-COPY --from=build /build .
+COPY --from=build /app/build .
 
 EXPOSE 3000
 
